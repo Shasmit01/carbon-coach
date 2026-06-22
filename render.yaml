@@ -1,0 +1,15 @@
+# Render Deployment Configuration
+# This file contains all settings needed for Render deployment
+
+root_dir="backend"
+build_command="pip install -r requirements.txt"
+start_command="cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+
+# Environment Variables (add these in Render dashboard)
+# ENVIRONMENT=production
+# DATABASE_URL=postgresql://...
+# JWT_SECRET=your-secret-key
+# DEBUG=False
+# CORS_ORIGINS=["https://carbon-coach-XXXX.vercel.app"]
+# OLLAMA_API_URL=http://localhost:11434
+# RATE_LIMIT_PER_MINUTE=100
